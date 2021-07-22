@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <script>
+        var url =
+            "https://api.giphy.com/v1/gifs/search?api_key=g8dBw4OTVzo50XvTEhgxPZImzQBOggmK&q=nba&limit=12&offset=0&rating=g&lang=en";
+
+        var myImage = document.getElementsByClassName("img");
+        var myRequest = new XMLHttpRequest();
+
+        myRequest.open("GET", url);
+        myRequest.responseType = "json";
+        myRequest.send();
+
+        myRequest.onload = function () {
+            const resp = myRequest.response;
+            for (let j = 0; j <= resp.data.length; j++) {
+                for (let i = 0; i < resp.data.length; i++) {
+                    var imagen = resp.data[i].images.original.url;
+                    myImage[j*11 + i].src = imagen;
+                }
+            }
+        };
+
+    </script>
+    <title>Galery</title>
+</head>
+
+<body>
+    <div class="cont-white"></div>
+    <div class="cont-main">
+        <div class="cont cont-first" id="first">
+            <div class="cont-menu">
+                <p class="title">ABC DEV</p>
+                <div>
+                    <div>
+                        <hr>
+                        <hr>
+                    </div>
+                    find your gif
+                </div>
+                <div>
+                    <p>account</p>
+                    <p>cart(0)</p>
+                </div>
+            </div>
+            <div class="cont-body">
+                <div class="first-line">
+                    <p>web dev is the</p>
+                    <div><i class="icon-play"></i></div>
+                    <p class="p-watch">watch the gif</p>
+                </div>
+                <div class="center-line">
+                    <p>welcome to the world of web development, in this case an example of a gallery with gifs where
+                        promises are used</p>
+                    <p>new casual</p>
+                </div>
+                <div class="last-line">
+                    <p>watch now</p>
+                </div>
+            </div>
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+        </div>
+        <div class="cont cont-sec" id="sec">
+            <div class="cont-menu">
+                <p class="title">ABC DEV</p>
+                <div>
+                    <div>
+                        <hr>
+                        <hr>
+                    </div>
+                    <p>find your gif</p>
+
+                </div>
+                <div>
+                    <p>account</p>
+                    <p>cart(0)</p>
+                </div>
+            </div>
+            <div class="cont cont-body">
+                <div class="first-line">
+                    <p>web dev is the</p>
+                    <div><i class="icon-play"></i></div>
+                    <p class="p-watch">watch the gif</p>
+                </div>
+                <div class="center-line">
+                    <p>welcome to the world of web development, in this case an example of a gallery with gifs where
+                        promises are used</p>
+                    <p>new casual</p>
+                </div>
+                <div class="last-line">
+                    <p>watch now</p>
+                </div>
+            </div>
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+        </div>
+        <div class="cont cont-third" id="third">
+            <div class="cont-menu">
+                <p class="title">ABC DEV</p>
+                <div>
+                    <div>
+                        <hr>
+                        <hr>
+                    </div>
+                    <p>find your gif</p>
+                </div>
+                <div>
+                    <p>account</p>
+                    <p>cart(0)</p>
+                </div>
+            </div>
+            <div class="cont cont-body">
+                <div class="first-line">
+                    <p>web dev is the</p>
+                    <div><i class="icon-play"></i></div>
+                    <p class="p-watch">watch the gif</p>
+                </div>
+                <div class="center-line">
+                    <p>welcome to the world of web development, in this case an example of a gallery with gifs where
+                        promises are used</p>
+                    <p>new casual</p>
+                </div>
+                <div class="last-line">
+                    <p>watch now</p>
+                </div>
+            </div>
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+
+        </div>
+        <div class="cont cont-four" id="four">
+            <div class="cont-menu">
+                <p class="title">ABC DEV</p>
+                <div>
+                    <div>
+                        <hr>
+                        <hr>
+                    </div>
+                    find your gif
+                </div>
+                <div>
+                    <p>account</p>
+                    <p>cart(0)</p>
+                </div>
+            </div>
+            <div class="cont cont-body">
+                <div class="first-line">
+                    <p>web dev is the</p>
+                    <div><i class="icon-play"></i></div>
+                    <p class="p-watch">watch the gif</p>
+                </div>
+                <div class="center-line">
+                    <p>welcome to the world of web development, in this case an example of a gallery with gifs where
+                        promises are used</p>
+                    <p>new casual</p>
+                </div>
+                <div class="last-line">
+                    <p>watch now</p>
+                </div>
+            </div>
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+        </div>
+        <div class="cont cont-five" id="five">
+            <div class="cont-menu">
+                <p class="title">ABC DEV</p>
+                <div>
+                    <div>
+                        <hr>
+                        <hr>
+                    </div>
+                    <p>find your gif</p>
+
+                </div>
+                <div>
+                    <p>account</p>
+                    <p>cart(0)</p>
+                </div>
+            </div>
+            <div class="cont cont-body">
+                <div class="first-line">
+                    <p>web dev is the</p>
+                    <div><i class="icon-play"></i></div>
+                    <p class="p-watch">watch the gif</p>
+                </div>
+                <div class="center-line">
+                    <p>welcome to the world of web development, in this case an example of a gallery with gifs where
+                        promises are used</p>
+                    <p>new casual</p>
+                </div>
+                <div class="last-line">
+                    <p>watch now</p>
+                </div>
+            </div>
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+        </div>
+        <div class="cont cont-six" id="six">
+            <div class="cont-menu">
+                <p class="title">ABC DEV</p>
+                <div>
+                    <div>
+                        <hr>
+                        <hr>
+                    </div>
+                    <p>find your gif</p>
+                </div>
+                <div>
+                    <p>account</p>
+                    <p>cart(0)</p>
+                </div>
+            </div>
+            <div class="cont-body">
+                <div class="first-line">
+                    <p>web dev is the</p>
+                    <div><i class="icon-play"></i></div>
+                    <p class="p-watch">watch the gif</p>
+                </div>
+                <div class="center-line">
+                    <p>welcome to the world of web development, in this case an example of a gallery with gifs where
+                        promises are used</p>
+                    <p>new casual</p>
+                </div>
+                <div class="last-line">
+                    <p>watch now</p>
+                </div>
+            </div>
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+
+        </div>
+        <div class="cont cont-seven" id="seven">
+            <div class="cont-menu">
+                <p class="title">ABC DEV</p>
+                <div>
+                    <div>
+                        <hr>
+                        <hr>
+                    </div>
+                    find your gif
+                </div>
+                <div>
+                    <p>account</p>
+                    <p>cart(0)</p>
+                </div>
+            </div>
+            <div class="cont-body">
+                <div class="first-line">
+                    <p>web dev is the</p>
+                    <div><i class="icon-play"></i></div>
+                    <p class="p-watch">watch the gif</p>
+                </div>
+                <div class="center-line">
+                    <p>welcome to the world of web development, in this case an example of a gallery with gifs where
+                        promises are used</p>
+                    <p>new casual</p>
+                </div>
+                <div class="last-line">
+                    <p>watch now</p>
+                </div>
+            </div>
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+        </div>
+        <div class="cont cont-eight" id="eight">
+            <div class="cont-menu">
+                <p class="title">ABC DEV</p>
+                <div>
+                    <div>
+                        <hr>
+                        <hr>
+                    </div>
+                    <p>find your gif</p>
+
+                </div>
+                <div>
+                    <p>account</p>
+                    <p>cart(0)</p>
+                </div>
+            </div>
+            <div class="cont-body">
+                <div class="first-line">
+                    <p>web dev is the</p>
+                    <div><i class="icon-play"></i></div>
+                    <p class="p-watch">watch the gif</p>
+                </div>
+                <div class="center-line">
+                    <p>welcome to the world of web development, in this case an example of a gallery with gifs where
+                        promises are used</p>
+                    <p>new casual</p>
+                </div>
+                <div class="last-line">
+                    <p>watch now</p>
+                </div>
+            </div>
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+        </div>
+        <div class="cont cont-nine" id="nine">
+            <div class="cont-menu">
+                <p class="title">ABC DEV</p>
+                <div>
+                    <div>
+                        <hr>
+                        <hr>
+                    </div>
+                    <p>find your gif</p>
+                </div>
+                <div>
+                    <p>account</p>
+                    <p>cart(0)</p>
+                </div>
+            </div>
+            <div class="cont-body">
+                <div class="first-line">
+                    <p>web dev is the</p>
+                    <div><i class="icon-play"></i></div>
+                    <p class="p-watch">watch the gif</p>
+                </div>
+                <div class="center-line">
+                    <p>welcome to the world of web development, in this case an example of a gallery with gifs where
+                        promises are used</p>
+                    <p>new casual</p>
+                </div>
+                <div class="last-line">
+                    <p>watch now</p>
+                </div>
+            </div>
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+
+        </div>
+        <div class="cont cont-ten" id="ten">
+            <div class="cont-menu">
+                <p class="title">ABC DEV</p>
+                <div>
+                    <div>
+                        <hr>
+                        <hr>
+                    </div>
+                    find your gif
+                </div>
+                <div>
+                    <p>account</p>
+                    <p>cart(0)</p>
+                </div>
+            </div>
+            <div class="cont-body">
+                <div class="first-line">
+                    <p>web dev is the</p>
+                    <div><i class="icon-play"></i></div>
+                    <p class="p-watch">watch the gif</p>
+                </div>
+                <div class="center-line">
+                    <p>welcome to the world of web development, in this case an example of a gallery with gifs where
+                        promises are used</p>
+                    <p>new casual</p>
+                </div>
+                <div class="last-line">
+                    <p>watch now</p>
+                </div>
+            </div>
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+        </div>
+        <div class="cont cont-eleven" id="eleven">
+            <div class="cont-menu">
+                <p class="title">ABC DEV</p>
+                <div>
+                    <div>
+                        <hr>
+                        <hr>
+                    </div>
+                    <p>find your gif</p>
+
+                </div>
+                <div>
+                    <p>account</p>
+                    <p>cart(0)</p>
+                </div>
+            </div>
+            <div class="cont-body">
+                <div class="first-line">
+                    <p>web dev is the</p>
+                    <div><i class="icon-play"></i></div>
+                    <p class="p-watch">watch the gif</p>
+                </div>
+                <div class="center-line">
+                    <p>welcome to the world of web development, in this case an example of a gallery with gifs where
+                        promises are used</p>
+                    <p>new casual</p>
+                </div>
+                <div class="last-line">
+                    <p>watch now</p>
+                </div>
+            </div>
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+        </div>
+        <div class="cont cont-twelve" id="twelve">
+            <div class="cont-menu">
+                <p class="title">ABC DEV</p>
+                <div>
+                    <div>
+                        <hr>
+                        <hr>
+                    </div>
+                    <p>find your gif</p>
+                </div>
+                <div>
+                    <p>account</p>
+                    <p>cart(0)</p>
+                </div>
+            </div>
+            <div class="cont-body">
+                <div class="first-line">
+                    <p>web dev is the</p>
+                    <div><i class="icon-play"></i></div>
+                    <p class="p-watch">watch the gif</p>
+                </div>
+                <div class="center-line">
+                    <p>welcome to the world of web development, in this case an example of a gallery with gifs where
+                        promises are used</p>
+                    <p>new casual</p>
+                </div>
+                <div class="last-line">
+                    <p>watch now</p>
+                </div>
+            </div>
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+            <img class="img" src="" alt="">
+
+        </div>
+
+
+        <div class="cont-btn">
+            <button id="btn-left"><i class="icon-left-open"></i></button>
+            <button id="btn-right"><i class="icon-right-open"></i></button>
+        </div>
+    </div>
+    <div class="cont-white"></div>
+    <script src="javascript.js"></script>
+</body>
+
+</html>
