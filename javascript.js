@@ -13,8 +13,12 @@ let nine = document.getElementById("nine");
 let ten = document.getElementById("ten");
 let eleven = document.getElementById("eleven");
 let twelve = document.getElementById("twelve");
+let princ = document.getElementById("princ");
+
+var myImagePrinc = document.getElementsByClassName("princ-img");
 
 let cont = [
+  princ,
   first,
   sec,
   third,
@@ -30,16 +34,34 @@ let cont = [
 ];
 let elementDisplay = [];
 
-let img = document.getElementsByClassName("img");
+for (let i = 0; i < myImagePrinc.length; i++) {
+  let imgStyle = window.getComputedStyle(myImagePrinc[i]);
+  let imgRotate = imgStyle.getPropertyValue("transform");
+
+  if (imgRotate == "matrix(0.994522, -0.104528, 0.104528, 0.994522, 0, 0)") {
+    
+    myImagePrinc[i].style.animationName = "changeImg1";
+    myImagePrinc[i].style.animationDuration = "3s"
+    myImagePrinc[i].style.animationFillMode = "forwards";
+    myImagePrinc[i].style.animationTimingFunction = "ease";
+
+    myImagePrinc[i + 1].style.animationName = "changeImg2";
+    myImagePrinc[i + 1].style.animationDuration = "3s"
+    myImagePrinc[i + 1].style.animationFillMode = "forwards";
+
+    myImagePrinc[i + 2].style.animationName = "changeImg3";
+    myImagePrinc[i + 2].style.animationDuration = "3s"
+    myImagePrinc[i + 2].style.animationFillMode = "forwards";
+
+    myImagePrinc[i + 3].style.animationName = "changeImg4";
+    myImagePrinc[i + 3].style.animationDuration = "3s"
+    myImagePrinc[i + 3].style.animationFillMode = "forwards";
+  }
+}
 
 btnRight.addEventListener(
   "click",
   () => {
-    for (k = 0; k < img.length; k++) {
-      img[k].style.width = "52%";
-      img[k].style.height = "59%";
-      img[k].style.marginTop = "12%";
-    }
     for (let j = 0; j < cont.length; j++) {
       let elementStyle = window.getComputedStyle(cont[j]);
       elementDisplay.push(elementStyle.getPropertyValue("display"));

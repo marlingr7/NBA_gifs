@@ -15,6 +15,7 @@
             "https://api.giphy.com/v1/gifs/search?api_key=g8dBw4OTVzo50XvTEhgxPZImzQBOggmK&q=nba&limit=12&offset=0&rating=g&lang=en";
 
         var myImage = document.getElementsByClassName("img");
+        var myImagePrinc = document.getElementsByClassName("princ-img");
         var myRequest = new XMLHttpRequest();
 
         myRequest.open("GET", url);
@@ -26,9 +27,11 @@
             for (let j = 0; j <= resp.data.length; j++) {
                 for (let i = 0; i < resp.data.length; i++) {
                     var imagen = resp.data[i].images.original.url;
-                    myImage[j*11 + i].src = imagen;
+                    myImage[j * 11 + i].src = imagen;
+                    myImagePrinc[i].src = imagen;
                 }
             }
+            myImage[132].src = resp.data[resp.data.length - 1].images.original.url;
         };
 
     </script>
@@ -38,6 +41,49 @@
 <body>
     <div class="cont-white"></div>
     <div class="cont-main">
+        <div class="cont cont-princ" id="princ">
+            <div class="cont-menu">
+                <p class="title">ABC DEV</p>
+                <div>
+                    <div>
+                        <hr>
+                        <hr>
+                    </div>
+                    find your gif
+                </div>
+                <div>
+                    <p>account</p>
+                    <p>cart(0)</p>
+                </div>
+            </div>
+            <div class="cont-body">
+                <div class="first-line">
+                    <p>web dev is the</p>
+                    <div><i class="icon-play"></i></div>
+                    <p class="p-watch">watch the gif</p>
+                </div>
+                <div class="center-line">
+                    <p>welcome to the world of web development, in this case an example of a gallery with gifs where
+                        promises are used</p>
+                    <p>new casual</p>
+                </div>
+                <div class="last-line">
+                    <p>watch now</p>
+                </div>
+            </div>
+            <img class="princ-img" src="" alt="">
+            <img class="princ-img" src="" alt="">
+            <img class="princ-img" src="" alt="">
+            <img class="princ-img" src="" alt="">
+            <img class="princ-img" src="" alt="">
+            <img class="princ-img" src="" alt="">
+            <img class="princ-img" src="" alt="">
+            <img class="princ-img" src="" alt="">
+            <img class="princ-img" src="" alt="">
+            <img class="princ-img" src="" alt="">
+            <img class="princ-img" src="" alt="">
+            <img class="princ-img" src="" alt="">
+        </div>
         <div class="cont cont-first" id="first">
             <div class="cont-menu">
                 <p class="title">ABC DEV</p>
