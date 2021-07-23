@@ -39,22 +39,21 @@ for (let i = 0; i < myImagePrinc.length; i++) {
   let imgRotate = imgStyle.getPropertyValue("transform");
 
   if (imgRotate == "matrix(0.994522, -0.104528, 0.104528, 0.994522, 0, 0)") {
-    
     myImagePrinc[i].style.animationName = "changeImg1";
-    myImagePrinc[i].style.animationDuration = "3s"
+    myImagePrinc[i].style.animationDuration = "3s";
     myImagePrinc[i].style.animationFillMode = "forwards";
     myImagePrinc[i].style.animationTimingFunction = "ease";
 
     myImagePrinc[i + 1].style.animationName = "changeImg2";
-    myImagePrinc[i + 1].style.animationDuration = "3s"
+    myImagePrinc[i + 1].style.animationDuration = "3s";
     myImagePrinc[i + 1].style.animationFillMode = "forwards";
 
     myImagePrinc[i + 2].style.animationName = "changeImg3";
-    myImagePrinc[i + 2].style.animationDuration = "3s"
+    myImagePrinc[i + 2].style.animationDuration = "3s";
     myImagePrinc[i + 2].style.animationFillMode = "forwards";
 
     myImagePrinc[i + 3].style.animationName = "changeImg4";
-    myImagePrinc[i + 3].style.animationDuration = "3s"
+    myImagePrinc[i + 3].style.animationDuration = "3s";
     myImagePrinc[i + 3].style.animationFillMode = "forwards";
   }
 }
