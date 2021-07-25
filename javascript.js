@@ -1,3 +1,64 @@
+var url =
+  "https://api.giphy.com/v1/gifs/search?api_key=g8dBw4OTVzo50XvTEhgxPZImzQBOggmK&q=nba&limit=12&offset=0&rating=g&lang=en";
+
+var img = document.getElementsByClassName("img");
+var backImg = document.getElementsByClassName("princ-img");
+var myRequest = new XMLHttpRequest();
+
+fetch(url)
+  .then(
+    function(response) {
+      if (response.status !== 200) {
+        console.log('Looks like there was a problem. Status Code: ' +
+          response.status);
+        return;
+      }
+
+      // Examine the text in the response
+      response.json().then(function(data) {
+        for (let j = 0; j <= data.data.length; j++) {
+          for (let i = 0; i < data.data.length; i++) {
+            var image = data.data[i].images.original.url;
+            img[j * 11 + i].style.backgroundImage = "url(" + image + ")";
+            backImg[i].style.backgroundImage = "url(" + image + ")";
+          }
+        }
+        for (let j = 0; j < 4; j++) {
+          let backStyle = window.getComputedStyle(backImg[j]);
+          let elementBack = backStyle.getPropertyValue("background-image");
+          backImg[j + 12].style.backgroundImage = elementBack;
+        }
+        img[132].style.backgroundImage =
+          "url(" + data.data[resp.data.length - 1].images.original.url + ")";
+      });
+    }
+  )
+  .catch(function(err) {
+    console.log('Fetch Error :-S', err);
+  });
+
+//myRequest.open("GET", url);
+//myRequest.responseType = "json";
+//myRequest.send();
+//
+//myRequest.onload = function () {
+//  const resp = myRequest.response;
+//  for (let j = 0; j <= resp.data.length; j++) {
+//    for (let i = 0; i < resp.data.length; i++) {
+//      var image = resp.data[i].images.original.url;
+//      img[j * 11 + i].style.backgroundImage = "url(" + image + ")";
+//      backImg[i].style.backgroundImage = "url(" + image + ")";
+//    }
+//  }
+//  for (let j = 0; j < 4; j++) {
+//    let backStyle = window.getComputedStyle(backImg[j]);
+//    let elementBack = backStyle.getPropertyValue("background-image");
+//    backImg[j + 12].style.backgroundImage = elementBack;
+//  }
+//  img[132].style.backgroundImage =
+//    "url(" + resp.data[resp.data.length - 1].images.original.url + ")";
+//};
+
 let btnRight = document.getElementById("btn-right");
 let btnLeft = document.getElementById("btn-left");
 
@@ -15,7 +76,54 @@ let eleven = document.getElementById("eleven");
 let twelve = document.getElementById("twelve");
 let princ = document.getElementById("princ");
 
-var myImagePrinc = document.getElementsByClassName("princ-img");
+let back = document.getElementsByClassName("back");
+let border = document.getElementsByClassName("border");
+let line = document.getElementsByClassName("line");
+
+let backAnimation = [
+  "back1 2s",
+  "back2 2s",
+  "back3 2s",
+  "back4 2s",
+  "back5 2s",
+  "back6 2s",
+  "back1 2s",
+  "back2 2s",
+  "back3 2s",
+  "back4 2s",
+  "back5 2s",
+  "back6 2s",
+];
+
+let lineAnimation = [
+  "line1 2s",
+  "line2 2s",
+  "line3 2s",
+  "line4 2s",
+  "line5 2s",
+  "line6 2s",
+  "line1 2s",
+  "line2 2s",
+  "line3 2s",
+  "line4 2s",
+  "line5 2s",
+  "line6 2s",
+];
+
+let borderAnimation = [
+  "border1 2s",
+  "border2 2s",
+  "border3 2s",
+  "border4 2s",
+  "border5 2s",
+  "border6 2s",
+  "border1 2s",
+  "border2 2s",
+  "border3 2s",
+  "border4 2s",
+  "border5 2s",
+  "border6 2s",
+];
 
 let cont = [
   princ,
@@ -34,29 +142,43 @@ let cont = [
 ];
 let elementDisplay = [];
 
-for (let i = 0; i < myImagePrinc.length; i++) {
-  let imgStyle = window.getComputedStyle(myImagePrinc[i]);
-  let imgRotate = imgStyle.getPropertyValue("transform");
+function animatePrinc() {
+  setTimeout(() => {
+    backImg[0].className += " moveImg1";
+    backImg[1].className += " moveImg2";
+    backImg[2].className += " moveImg3";
+    backImg[3].className += " moveImg4";
+  }, 0);
 
-  if (imgRotate == "matrix(0.994522, -0.104528, 0.104528, 0.994522, 0, 0)") {
-    myImagePrinc[i].style.animationName = "changeImg1";
-    myImagePrinc[i].style.animationDuration = "3s";
-    myImagePrinc[i].style.animationFillMode = "forwards";
-    myImagePrinc[i].style.animationTimingFunction = "ease";
-
-    myImagePrinc[i + 1].style.animationName = "changeImg2";
-    myImagePrinc[i + 1].style.animationDuration = "3s";
-    myImagePrinc[i + 1].style.animationFillMode = "forwards";
-
-    myImagePrinc[i + 2].style.animationName = "changeImg3";
-    myImagePrinc[i + 2].style.animationDuration = "3s";
-    myImagePrinc[i + 2].style.animationFillMode = "forwards";
-
-    myImagePrinc[i + 3].style.animationName = "changeImg4";
-    myImagePrinc[i + 3].style.animationDuration = "3s";
-    myImagePrinc[i + 3].style.animationFillMode = "forwards";
+  for (let i = 0; i < backImg.length - 5; i++) {
+    var count = 1500 * (i + 1);
+    setTimeout(() => {
+      back[0].style.animation = backAnimation[i];
+      back[1].style.animation = backAnimation[i];
+      line[0].style.animation = lineAnimation[i];
+      line[1].style.animation = lineAnimation[i];
+      border[0].style.animation = borderAnimation[i];
+      border[1].style.animation = borderAnimation[i];
+      backImg[i].classList.replace("moveImg1", "hidden");
+      backImg[i + 3].classList.remove("moveImg4");
+      backImg[i + 3].style.transform = "rotate(6deg)";
+      backImg[i + 3].style.zIndex = "0";
+      backImg[i + 3].style.opacity = "1";
+      backImg[i + 2].classList.remove("moveImg3");
+      backImg[i + 2].style.transform = "rotate(0deg)";
+      backImg[i + 2].style.zIndex = "1";
+      backImg[i + 1].classList.remove("moveImg2");
+      backImg[i + 1].style.transform = "rotate(-6deg)";
+      backImg[i + 1].style.zIndex = "2";
+      backImg[i + 1].className += " moveImg1";
+      backImg[i + 2].className += " moveImg2";
+      backImg[i + 3].className += " moveImg3";
+      backImg[i + 4].className += " moveImg4";
+    }, count);
   }
 }
+
+animatePrinc();
 
 btnRight.addEventListener(
   "click",

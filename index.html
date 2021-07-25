@@ -10,44 +10,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
-    <script>
-        var url =
-            "https://api.giphy.com/v1/gifs/search?api_key=g8dBw4OTVzo50XvTEhgxPZImzQBOggmK&q=nba&limit=12&offset=0&rating=g&lang=en";
-
-        var myImage = document.getElementsByClassName("img");
-        var myImagePrinc = document.getElementsByClassName("princ-img");
-        var myRequest = new XMLHttpRequest();
-
-        myRequest.open("GET", url);
-        myRequest.responseType = "json";
-        myRequest.send();
-
-        myRequest.onload = function () {
-            const resp = myRequest.response;
-            for (let j = 0; j <= resp.data.length; j++) {
-                for (let i = 0; i < resp.data.length; i++) {
-                    var imagen = resp.data[i].images.original.url;
-                    myImage[j * 11 + i].src = imagen;
-                    myImagePrinc[i].src = imagen;
-                }
-            }
-            myImage[132].src = resp.data[resp.data.length - 1].images.original.url;
-        };
-
-    </script>
     <title>Galery</title>
 </head>
 
 <body>
     <div class="cont-white"></div>
     <div class="cont-main">
-        <div class="cont cont-princ" id="princ">
+        <div class="cont cont-princ back" id="princ">
             <div class="cont-menu">
                 <p class="title">ABC DEV</p>
                 <div>
                     <div>
-                        <hr>
-                        <hr>
+                        <hr class="line">
+                        <hr class="line">
                     </div>
                     find your gif
                 </div>
@@ -56,33 +31,39 @@
                     <p>cart(0)</p>
                 </div>
             </div>
+
+            <div class="all-img princ-img"></div>
+            <div class="all-img princ-img"></div>
+            <div class="all-img princ-img"></div>
+            <div class="all-img princ-img"></div>
+            <div class="all-img princ-img"></div>
+            <div class="all-img princ-img"></div>
+            <div class="all-img princ-img"></div>
+            <div class="all-img princ-img"></div>
+            <div class="all-img princ-img"></div>
+            <div class="all-img princ-img"></div>
+            <div class="all-img princ-img"></div>
+            <div class="all-img princ-img"></div>         
+            <div class="all-img princ-img"></div>
+            <div class="all-img princ-img"></div>
+            <div class="all-img princ-img"></div>
+            <div class="all-img princ-img"></div>   
+            
             <div class="cont-body">
                 <div class="first-line">
                     <p>web dev is the</p>
-                    <div><i class="icon-play"></i></div>
-                    <p class="p-watch">watch the gif</p>
+                    <div class="border"><i class="icon-play"></i></div>
+                    <p class="p-watch back">watch the gif</p>
                 </div>
                 <div class="center-line">
                     <p>welcome to the world of web development, in this case an example of a gallery with gifs where
                         promises are used</p>
                     <p>new casual</p>
                 </div>
-                <div class="last-line">
+                <div class="last-line border">
                     <p>watch now</p>
                 </div>
             </div>
-            <img class="princ-img" src="" alt="">
-            <img class="princ-img" src="" alt="">
-            <img class="princ-img" src="" alt="">
-            <img class="princ-img" src="" alt="">
-            <img class="princ-img" src="" alt="">
-            <img class="princ-img" src="" alt="">
-            <img class="princ-img" src="" alt="">
-            <img class="princ-img" src="" alt="">
-            <img class="princ-img" src="" alt="">
-            <img class="princ-img" src="" alt="">
-            <img class="princ-img" src="" alt="">
-            <img class="princ-img" src="" alt="">
         </div>
         <div class="cont cont-first" id="first">
             <div class="cont-menu">
@@ -114,18 +95,19 @@
                     <p>watch now</p>
                 </div>
             </div>
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
+            
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>   
         </div>
         <div class="cont cont-sec" id="sec">
             <div class="cont-menu">
@@ -158,18 +140,18 @@
                     <p>watch now</p>
                 </div>
             </div>
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>     
         </div>
         <div class="cont cont-third" id="third">
             <div class="cont-menu">
@@ -201,18 +183,18 @@
                     <p>watch now</p>
                 </div>
             </div>
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>    
 
         </div>
         <div class="cont cont-four" id="four">
@@ -245,18 +227,18 @@
                     <p>watch now</p>
                 </div>
             </div>
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>     
         </div>
         <div class="cont cont-five" id="five">
             <div class="cont-menu">
@@ -289,18 +271,18 @@
                     <p>watch now</p>
                 </div>
             </div>
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>   
         </div>
         <div class="cont cont-six" id="six">
             <div class="cont-menu">
@@ -332,18 +314,18 @@
                     <p>watch now</p>
                 </div>
             </div>
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>     
 
         </div>
         <div class="cont cont-seven" id="seven">
@@ -376,18 +358,18 @@
                     <p>watch now</p>
                 </div>
             </div>
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>   
         </div>
         <div class="cont cont-eight" id="eight">
             <div class="cont-menu">
@@ -420,18 +402,18 @@
                     <p>watch now</p>
                 </div>
             </div>
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>   
         </div>
         <div class="cont cont-nine" id="nine">
             <div class="cont-menu">
@@ -463,18 +445,18 @@
                     <p>watch now</p>
                 </div>
             </div>
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>     
 
         </div>
         <div class="cont cont-ten" id="ten">
@@ -507,18 +489,18 @@
                     <p>watch now</p>
                 </div>
             </div>
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>     
         </div>
         <div class="cont cont-eleven" id="eleven">
             <div class="cont-menu">
@@ -551,18 +533,18 @@
                     <p>watch now</p>
                 </div>
             </div>
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>    
         </div>
         <div class="cont cont-twelve" id="twelve">
             <div class="cont-menu">
@@ -594,18 +576,18 @@
                     <p>watch now</p>
                 </div>
             </div>
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
-            <img class="img" src="" alt="">
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>
+            <div class="img all-img"></div>   
 
         </div>
 

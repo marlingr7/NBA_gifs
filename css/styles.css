@@ -13,6 +13,381 @@
   --line-color-six: rgba(175, 121, 121, 255);
 }
 
+@keyframes back1 {
+  from {
+    background-color: var(--background-first);
+    color: rgba(255, 255, 193, 255);
+  }
+
+  50%{
+    background-color: var(--background-sec);
+    color: rgba(251, 214, 186, 255);
+  }
+
+  to {
+    background-color: var(--background-sec);
+    color: rgba(251, 214, 186, 255);
+  }
+}
+
+@keyframes back2 {
+  from {
+    background-color: var(--background-sec);
+    color: rgba(251, 214, 186, 255);
+  }
+
+  50%{
+    background-color: var(--background-third);
+    color: rgb(242, 223, 245, 255);
+  }
+
+  to {
+    background-color: var(--background-third);
+    color: rgb(242, 223, 245, 255);
+  }
+}
+
+@keyframes back3 {
+  from {
+    background-color: var(--background-third);
+    color: rgb(242, 223, 245, 255);
+  }
+
+  50% {
+    background-color: var(--background-four);
+    color: rgba(227, 233, 241, 255);
+  }
+
+  to {
+    background-color: var(--background-four);
+    color: rgba(227, 233, 241, 255);
+  }
+}
+
+@keyframes back4 {
+  from {
+    background-color: var(--background-four);
+    color: rgba(227, 233, 241, 255);
+  }
+
+  50% {
+    background-color: var(--background-five);
+    color: rgba(203, 245, 207, 255);
+  }
+
+  to {
+    background-color: var(--background-five);
+    color: rgba(203, 245, 207, 255);
+  }
+}
+
+@keyframes back5 {
+  from {
+    background-color: var(--background-five);
+    color: rgba(203, 245, 207, 255);
+  }
+
+  50% {
+    background-color: var(--background-six);
+    color: rgb(236, 217, 217, 255);
+  }
+
+  to {
+    background-color: var(--background-six);
+    color: rgb(236, 217, 217, 255);
+  }
+}
+
+@keyframes back6 {
+  from {
+    background-color: var(--background-six);
+    color: rgb(236, 217, 217, 255);
+  }
+
+  50% {
+    background-color: var(--background-first);
+    color: rgba(255, 255, 193, 255);
+  }
+
+  to {
+    background-color: var(--background-first);
+    color: rgba(255, 255, 193, 255);
+  }
+}
+
+@keyframes line1 {
+  from {
+    background: var(--line-color-first);
+  }
+
+  50% {
+    background-color: var(--line-color-sec);
+  }
+
+  to {
+    background-color: var(--line-color-sec);
+  }
+}
+
+@keyframes line2 {
+  from {
+    background-color: var(--line-color-sec);
+  }
+
+  50% {
+    background-color: var(--line-color-third);
+  }
+
+  to {
+    background-color: var(--line-color-third);
+  }
+}
+
+@keyframes line3 {
+  from {
+    background-color: var(--line-color-third);
+  }
+
+  50% {
+    background-color: var(--line-color-four);
+  }
+
+  to {
+    background-color: var(--line-color-four);
+  }
+}
+
+@keyframes line4 {
+  from {
+    background-color: var(--line-color-four);
+  }
+
+  50% {
+    background-color: var(--line-color-five);
+  }
+
+  to {
+    background-color: var(--line-color-five);
+  }
+}
+
+@keyframes line5 {
+  from {
+    background-color: var(--line-color-five);
+  }
+
+  50% {
+    background-color: var(--line-color-six);
+  }
+
+  to {
+    background-color: var(--line-color-six);
+  }
+}
+
+@keyframes line6 {
+  from {
+    background-color: var(--line-color-six);
+  }
+
+  50% {
+    background: var(--line-color-first);
+  }
+
+  to {
+    background: var(--line-color-first);
+  }
+}
+
+
+@keyframes border1 {
+  from {
+    border-color: var(--line-color-first);
+  }
+
+  50% {
+    border-color: var(--line-color-sec);
+  }
+
+  to {
+    border-color: var(--line-color-sec);
+  }
+}
+
+@keyframes border2 {
+  from {
+    border-color: var(--line-color-sec);
+  }
+
+  50% {
+    border-color: var(--line-color-third);
+  }
+
+  to {
+    border-color: var(--line-color-third);
+  }
+}
+
+@keyframes border3 {
+  from {
+    border-color: var(--line-color-third);
+  }
+
+  50% {
+    border-color: var(--line-color-four);
+  }
+
+  to {
+    border-color: var(--line-color-four);
+  }
+}
+
+@keyframes border4 {
+  from {
+    border-color: var(--line-color-four);
+  }
+
+  50% {
+    border-color: var(--line-color-five);
+  }
+
+  to {
+    border-color: var(--line-color-five);
+  }
+}
+
+@keyframes border5 {
+  from {
+    border-color: var(--line-color-five);
+  }
+
+  50% {
+    border-color: var(--line-color-six);
+  }
+
+  to {
+    border-color: var(--line-color-six);
+  }
+}
+
+@keyframes border6 {
+  from {
+    border-color: var(--line-color-six);
+  }
+
+  50% {
+    border-color: var(--line-color-first);
+  }
+
+  to {
+    border-color: var(--line-color-first);
+  }
+}
+
+@keyframes fadeOffLeft {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-160%);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    transform: translateX(160%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes fadeOffRight {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(160%);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    transform: translateX(-160%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes changeImg1 {
+  form {
+    transform: rotate(-6deg);
+  }
+
+  50% {
+    transform: rotate(-6deg);
+    z-index: 2;
+  }
+
+  to {
+    transform: rotate(-45deg) translate(-180%, -250%);
+    z-index: 3;
+  }
+}
+
+@keyframes changeImg2 {
+  form {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+    z-index: 1;
+  }
+
+  to {
+    transform: rotate(-6deg);
+    z-index: 2;
+  }
+}
+
+@keyframes changeImg3 {
+  form {
+    transform: rotate(6deg);
+  }
+
+  50% {
+    transform: rotate(6deg);
+    z-index: 0;
+  }
+
+  to {
+    transform: rotate(0deg);
+    z-index: 1;
+  }
+}
+
+@keyframes changeImg4 {
+  form {
+    transform: rotate(12deg);
+  }
+
+  50% {
+    transform: rotate(12deg);
+    opacity: 0;
+  }
+
+  to {
+    transform: rotate(6deg);
+    opacity: 1;
+  }
+}
+
 html {
   height: 97%;
 }
@@ -60,46 +435,6 @@ body {
   background: var(--background-first);
   color: rgba(255, 255, 193, 255);
   display: flex;
-  animation: changeBack 36s;
-  animation-iteration-count: infinite;
-}
-
-@keyframes changeBack {
-  5%,
-  51% {
-    background-color: var(--background-first);
-    color: rgba(255, 255, 193, 255);
-  }
-
-  8.5%,
-  59% {
-    background-color: var(--background-sec);
-    color: rgba(251, 214, 186, 255);
-  }
-
-  17%,
-  67.5% {
-    background-color: var(--background-third);
-    color: rgb(242, 223, 245, 255);
-  }
-
-  25.5%,
-  76% {
-    background-color: var(--background-four);
-    color: rgba(227, 233, 241, 255);
-  }
-
-  34%,
-  83.5% {
-    background-color: var(--background-five);
-    color: rgba(203, 245, 207, 255);
-  }
-
-  42.5%,
-  92% {
-    background-color: var(--background-six);
-    color: rgb(236, 217, 217, 255);
-  }
 }
 
 .cont-first,
@@ -136,46 +471,6 @@ body {
 .cont-twelve {
   background: var(--background-six);
   color: rgb(236, 217, 217, 255);
-}
-
-@keyframes fadeOffLeft {
-  from {
-    transform: translateX(0%);
-  }
-
-  to {
-    transform: translateX(-120%);
-  }
-}
-
-@keyframes fadeInLeft {
-  from {
-    transform: translateX(120%);
-  }
-
-  to {
-    transform: translateX(0%);
-  }
-}
-
-@keyframes fadeOffRight {
-  from {
-    transform: translateX(0%);
-  }
-
-  to {
-    transform: translateX(120%);
-  }
-}
-
-@keyframes fadeInRight {
-  from {
-    transform: translateX(-120%);
-  }
-
-  to {
-    transform: translateX(0%);
-  }
 }
 
 .cont-menu {
@@ -221,43 +516,6 @@ hr {
   padding: 0;
 }
 
-.cont-princ hr {
-  animation: changeLine 36s;
-  animation-iteration-count: infinite;
-}
-
-@keyframes changeLine {
-  5%,
-  51% {
-    background: var(--line-color-first);
-  }
-
-  8.5%,
-  59% {
-    background-color: var(--line-color-sec);
-  }
-
-  17%,
-  67.5% {
-    background-color: var(--line-color-third);
-  }
-
-  25.5%,
-  76% {
-    background-color: var(--line-color-four);
-  }
-
-  34%,
-  83.5% {
-    background-color: var(--line-color-five);
-  }
-
-  42.5%,
-  92% {
-    background-color: var(--line-color-six);
-  }
-}
-
 .cont-sec hr,
 .cont-eight hr {
   background-color: var(--line-color-sec);
@@ -291,6 +549,80 @@ hr {
 .cont-menu div:last-of-type p {
   width: 32%;
   text-align: end;
+}
+
+.all-img {
+  position: absolute;
+  width: 345px;
+  height: 250px;
+  margin-top: 60px;
+  align-self: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.rotateLeft {
+  transform: rotate(-6deg);
+  z-index: 2;
+}
+
+.rotateCenter {
+  transform: rotate(0deg);
+  z-index: 1;
+}
+
+.rotateRight {
+  transform: rotate(0deg);
+  z-index: 0;
+  opacity: 1;
+}
+
+.all-img:nth-of-type(2) {
+  transform: rotate(-6deg);
+  z-index: 2;
+}
+
+.all-img:nth-of-type(3) {
+  transform: rotate(0deg);
+  z-index: 1;
+}
+
+.all-img:nth-of-type(4) {
+  transform: rotate(6deg);
+  z-index: 0;
+}
+
+.all-img:nth-of-type(5),
+.all-img:nth-of-type(6),
+.all-img:nth-of-type(7),
+.all-img:nth-of-type(8),
+.all-img:nth-of-type(9),
+.all-img:nth-of-type(10),
+.all-img:nth-of-type(11),
+.all-img:nth-of-type(12),
+.all-img:nth-of-type(13),
+.all-img:nth-of-type(14),
+.all-img:nth-of-type(15),
+.all-img:nth-of-type(16),
+.all-img:nth-of-type(17) {
+  opacity: 0;
+  z-index: 0;
+}
+
+.img:nth-of-type(3) {
+  transform: rotate(-6deg);
+  z-index: 2;
+}
+
+.img:nth-of-type(4) {
+  transform: rotate(0deg);
+  z-index: 1;
+}
+
+.img:nth-of-type(5) {
+  transform: rotate(6deg);
+  z-index: 0;
+  opacity: 1;
 }
 
 .cont-body {
@@ -327,44 +659,6 @@ hr {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.cont-princ .first-line div,
-.cont-princ .last-line {
-  animation: changeBorder 36s;
-  animation-iteration-count: infinite;
-}
-
-@keyframes changeBorder {
-  5%,
-  51% {
-    border-color: var(--line-color-first);
-  }
-
-  8.5%,
-  59% {
-    border-color: var(--line-color-sec);
-  }
-
-  17%,
-  67.5% {
-    border-color: var(--line-color-third);
-  }
-
-  25.5%,
-  76% {
-    border-color: var(--line-color-four);
-  }
-
-  34%,
-  83.5% {
-    border-color: var(--line-color-five);
-  }
-
-  42.5%,
-  92% {
-    border-color: var(--line-color-six);
-  }
 }
 
 .cont-sec .first-line div,
@@ -405,11 +699,6 @@ i {
   align-items: center;
   margin-left: -9.5%;
   background-color: rgba(228, 165, 2, 255);
-}
-
-.cont-princ .first-line p:last-of-type {
-  animation: changeBack 36s;
-  animation-iteration-count: infinite;
 }
 
 .cont-sec .first-line p:last-of-type,
@@ -511,187 +800,6 @@ i {
   font-size: 8px;
 }
 
-img {
-  position: absolute;
-  width: 335px;
-  height: 240px;
-  margin-top: 60px;
-  align-self: center;
-}
-
-img:first-of-type {
-  transform: rotate(-6deg);
-  z-index: 2;
-}
-
-img:nth-of-type(2) {
-  transform: rotate(0deg);
-  z-index: 1;
-}
-
-img:nth-of-type(3) {
-  transform: rotate(6deg);
-  z-index: 0;
-}
-
-img:nth-of-type(4),
-img:nth-of-type(5),
-img:nth-of-type(6),
-img:nth-of-type(7),
-img:nth-of-type(8),
-img:nth-of-type(9),
-img:nth-of-type(10),
-img:nth-of-type(11),
-img:nth-of-type(12) {
-  opacity: 0;
-  z-index: 0;
-}
-
-@keyframes changeImg1 {
-  form {
-    transform: rotate(-6deg);
-  }
-
-  50% {
-    transform: rotate(-6deg);
-    z-index: 2;
-  }
-
-  to {
-    transform: rotate(-45deg) translate(-140%, -250%);
-    z-index: 3;
-  }
-}
-
-@keyframes changeImg2 {
-  form {
-    transform: rotate(0deg);
-  }
-
-  50% {
-    transform: rotate(0deg);
-    z-index: 1;
-  }
-
-  to {
-    transform: rotate(-6deg);
-    z-index: 2;
-  }
-}
-
-@keyframes changeImg3 {
-  form {
-    transform: rotate(6deg);
-  }
-
-  50% {
-    transform: rotate(6deg);
-    z-index: 0;
-  }
-
-  to {
-    transform: rotate(0deg);
-    z-index: 1;
-  }
-}
-
-@keyframes changeImg4 {
-  form {
-    transform: rotate(12deg);
-  }
-
-  50% {
-    transform: rotate(12deg);
-    opacity: 0;
-  }
-
-  to {
-    transform: rotate(6deg);
-    opacity: 1;
-  }
-}
-
-/*
-@keyframes changeImg2 {
-  form {
-    transform: rotate(0deg);
-  }
-
-  25% {
-    transform: rotate(0deg);
-  }
-
-  50% {
-    transform: rotate(-6deg);
-    width: 335px;
-    z-index: 1;
-  }
-
-  to {
-    transform: rotate(-45deg) translate(-140%, -250%);
-    width: 400px;
-    z-index: 2;
-  }
-}
-
-@keyframes changeImg3 {
-  form {
-    transform: rotate(6deg);
-  }
-
-  15% {
-    transform: rotate(6deg);
-  }
-
-  30% {
-    transform: rotate(0deg);
-    width: 335px;
-  }
-
-  45% {
-    transform: rotate(0deg);
-  }
-
-  60% {
-    transform: rotate(-6deg);
-    width: 335px;
-    z-index: 0;
-  }
-
-  to {
-    transform: rotate(-45deg) translate(-140%, -250%);
-    width: 400px;
-    z-index: 1;
-  }
-}
-
-@keyframes changeImg4 {
-  form {
-    opacity: 0;
-    transform: rotate(0deg);
-  }
-
-  30% {
-    transform: rotate(6deg);
-    opacity: 1;
-  }
-
-  50% {
-    transform: rotate(0deg);
-  }
-
-  75% {
-    transform: rotate(-6deg);
-    width: 335px;
-  }
-
-  to {
-    transform: rotate(-45deg) translate(-140%, -250%);
-    width: 400px;
-    opacity: 1;
-  }
-}
-*/
 .cont-btn {
   height: 94%;
   width: 50.5%;
@@ -718,6 +826,31 @@ button {
   justify-self: center;
   align-items: center;
   outline: none;
+}
+
+.moveImg1 {
+  animation: changeImg1 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+.moveImg2 {
+  animation: changeImg2 2s;
+  animation-fill-mode: forwards;
+}
+
+.moveImg3 {
+  animation: changeImg3 2s;
+  animation-fill-mode: forwards;
+}
+
+.moveImg4 {
+  animation: changeImg4 2s;
+  animation-fill-mode: forwards;
+}
+
+.hidden {
+  display: none;
 }
 
 button i {
