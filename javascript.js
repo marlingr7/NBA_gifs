@@ -3,7 +3,6 @@ var url =
 
 var img = document.getElementsByClassName("img");
 var backImg = document.getElementsByClassName("princ-img");
-var myRequest = new XMLHttpRequest();
 
 fetch(url)
   .then(
@@ -29,35 +28,13 @@ fetch(url)
           backImg[j + 12].style.backgroundImage = elementBack;
         }
         img[132].style.backgroundImage =
-          "url(" + data.data[resp.data.length - 1].images.original.url + ")";
+          "url(" + data.data[data.data.length - 1].images.original.url + ")";
       });
     }
   )
   .catch(function(err) {
-    console.log('Fetch Error :-S', err);
+    alert('Fetch Error :-S', err);
   });
-
-//myRequest.open("GET", url);
-//myRequest.responseType = "json";
-//myRequest.send();
-//
-//myRequest.onload = function () {
-//  const resp = myRequest.response;
-//  for (let j = 0; j <= resp.data.length; j++) {
-//    for (let i = 0; i < resp.data.length; i++) {
-//      var image = resp.data[i].images.original.url;
-//      img[j * 11 + i].style.backgroundImage = "url(" + image + ")";
-//      backImg[i].style.backgroundImage = "url(" + image + ")";
-//    }
-//  }
-//  for (let j = 0; j < 4; j++) {
-//    let backStyle = window.getComputedStyle(backImg[j]);
-//    let elementBack = backStyle.getPropertyValue("background-image");
-//    backImg[j + 12].style.backgroundImage = elementBack;
-//  }
-//  img[132].style.backgroundImage =
-//    "url(" + resp.data[resp.data.length - 1].images.original.url + ")";
-//};
 
 let btnRight = document.getElementById("btn-right");
 let btnLeft = document.getElementById("btn-left");
