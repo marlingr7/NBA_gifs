@@ -1,39 +1,37 @@
-var url =
+let url =
   "https://api.giphy.com/v1/gifs/search?api_key=g8dBw4OTVzo50XvTEhgxPZImzQBOggmK&q=nba&limit=12&offset=0&rating=g&lang=en";
 
-var img = document.getElementsByClassName("img");
-var backImg = document.getElementsByClassName("princ-img");
+let img = document.getElementsByClassName("img");
+let backImg = document.getElementsByClassName("princ-img");
 
 fetch(url)
-  .then(
-    function(response) {
-      if (response.status !== 200) {
-        console.log('Looks like there was a problem. Status Code: ' +
-          response.status);
-        return;
-      }
-
-      // Examine the text in the response
-      response.json().then(function(data) {
-        for (let j = 0; j <= data.data.length; j++) {
-          for (let i = 0; i < data.data.length; i++) {
-            var image = data.data[i].images.original.url;
-            img[j * 11 + i].style.backgroundImage = "url(" + image + ")";
-            backImg[i].style.backgroundImage = "url(" + image + ")";
-          }
-        }
-        for (let j = 0; j < 4; j++) {
-          let backStyle = window.getComputedStyle(backImg[j]);
-          let elementBack = backStyle.getPropertyValue("background-image");
-          backImg[j + 12].style.backgroundImage = elementBack;
-        }
-        img[132].style.backgroundImage =
-          "url(" + data.data[data.data.length - 1].images.original.url + ")";
-      });
+  .then(function (response) {
+    if (response.status !== 200) {
+      console.log(
+        "Looks like there was a problem. Status Code: " + response.status
+      );
+      return;
     }
-  )
-  .catch(function(err) {
-    alert('Fetch Error :-S', err);
+
+    // Examine the text in the response
+    response.json().then(function (data) {
+      for (let j = 0; j < data.data.length; j++) {
+        for (let i = 0; i < data.data.length; i++) {
+          if (i + j < 12) {
+            img[j * 12 + i].style.backgroundImage =
+              "url(" + data.data[i + j].images.original.url + ")";
+          } else {
+            img[j * 12 + i].style.backgroundImage =
+              "url(" + data.data[i + j - 11].images.original.url + ")";
+          }
+          backImg[i].style.backgroundImage =
+            "url(" + data.data[i].images.original.url + ")";
+        }
+      }
+    });
+  })
+  .catch(function (err) {
+    alert("Fetch Error :-S", err);
   });
 
 let btnRight = document.getElementById("btn-right");
@@ -127,8 +125,12 @@ function animatePrinc() {
     backImg[3].className += " moveImg4";
   }, 0);
 
-  for (let i = 0; i < backImg.length - 5; i++) {
+  for (let i = 0; i < backImg.length - 1; i++) {
     var count = 1500 * (i + 1);
+    var iOne;
+    var iTwo;
+    var iThree;
+    var iFour;
     setTimeout(() => {
       back[0].style.animation = backAnimation[i];
       back[1].style.animation = backAnimation[i];
@@ -137,25 +139,80 @@ function animatePrinc() {
       border[0].style.animation = borderAnimation[i];
       border[1].style.animation = borderAnimation[i];
       backImg[i].classList.replace("moveImg1", "hidden");
-      backImg[i + 3].classList.remove("moveImg4");
-      backImg[i + 3].style.transform = "rotate(6deg)";
-      backImg[i + 3].style.zIndex = "0";
-      backImg[i + 3].style.opacity = "1";
-      backImg[i + 2].classList.remove("moveImg3");
-      backImg[i + 2].style.transform = "rotate(0deg)";
-      backImg[i + 2].style.zIndex = "1";
-      backImg[i + 1].classList.remove("moveImg2");
-      backImg[i + 1].style.transform = "rotate(-6deg)";
-      backImg[i + 1].style.zIndex = "2";
-      backImg[i + 1].className += " moveImg1";
-      backImg[i + 2].className += " moveImg2";
-      backImg[i + 3].className += " moveImg3";
-      backImg[i + 4].className += " moveImg4";
+      if (i < backImg.length - 4) {
+        backImg[i + 3].classList.remove("moveImg4");
+        backImg[i + 3].style.transform = "rotate(6deg)";
+        backImg[i + 3].style.zIndex = "0";
+        backImg[i + 3].style.opacity = "1";
+        backImg[i + 2].classList.remove("moveImg3");
+        backImg[i + 2].style.transform = "rotate(0deg)";
+        backImg[i + 2].style.zIndex = "1";
+        backImg[i + 1].classList.remove("moveImg2");
+        backImg[i + 1].style.transform = "rotate(-6deg)";
+        backImg[i + 1].style.zIndex = "2";
+        backImg[i + 1].className += " moveImg1";
+        backImg[i + 2].className += " moveImg2";
+        backImg[i + 3].className += " moveImg3";
+        backImg[i + 4].className += " moveImg4";
+      } else {
+        if (i + 1 >= 12) {
+          iOne = iTwo = iThree = iFour = i - 12;
+        } else if (i + 2 >= 12) {
+          iOne = i;
+          iTwo = iThree = iFour = i - 12;
+        } else if (i + 3 >= 12) {
+          iOne = iTwo = i;
+          iThree = iFour = i - 12;
+        } else {
+          iOne = iTwo = iThree = i;
+          iFour = i - 12;
+        }
+        backImg[iThree + 3].classList.remove("moveImg4");
+        backImg[iThree + 3].style.transform = "rotate(6deg)";
+        backImg[iThree + 3].style.zIndex = "0";
+        backImg[iThree + 3].style.opacity = "1";
+        backImg[iTwo + 2].classList.remove("moveImg3");
+        backImg[iTwo + 2].style.transform = "rotate(0deg)";
+        backImg[iTwo + 2].style.zIndex = "1";
+        backImg[iOne + 1].classList.remove("moveImg2");
+        backImg[iOne + 1].style.transform = "rotate(-6deg)";
+        backImg[iOne + 1].style.zIndex = "2";
+        backImg[iOne + 1].className += " moveImg1";
+        backImg[iTwo + 2].className += " moveImg2";
+        backImg[iThree + 3].className += " moveImg3";
+        backImg[iFour + 4].classList.replace("hidden", "moveImg4");
+        backImg[iFour + 4].style.zIndex = "0";
+      }
     }, count);
   }
 }
 
 animatePrinc();
+
+setInterval(() => {
+  for (let m = 0; m < backImg.length; m++) {
+    if (m > 2) {
+      backImg[m].style.zIndex = "0";
+      backImg[m].style.opacity = "0";
+    }
+    if (backImg[m].classList.contains("hidden")) {
+      backImg[m].classList.remove("hidden");
+    }
+    if (backImg[m].classList.contains("moveImg1")) {
+      backImg[m].classList.remove("moveImg1");
+    }
+    if (backImg[m].classList.contains("moveImg2")) {
+      backImg[m].classList.remove("moveImg2");
+    }
+    if (backImg[m].classList.contains("moveImg3")) {
+      backImg[m].classList.remove("moveImg3");
+    }
+    if (backImg[m].classList.contains("moveImg4")) {
+      backImg[m].classList.remove("moveImg4");
+    }
+  }
+  animatePrinc();
+}, 16600);
 
 btnRight.addEventListener(
   "click",

@@ -334,7 +334,7 @@
   }
 
   to {
-    transform: rotate(-45deg) translate(-180%, -250%);
+    transform: rotate(-45deg) translate(-190%, -250%);
     z-index: 3;
   }
 }
@@ -491,6 +491,7 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  width: 20%;
 }
 
 .cont-menu div div:first-of-type {
@@ -541,7 +542,7 @@ hr {
 }
 
 .cont-menu div:last-of-type p {
-  width: 32%;
+  width: 100%;
   text-align: end;
 }
 
@@ -553,22 +554,6 @@ hr {
   align-self: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.rotateLeft {
-  transform: rotate(-6deg);
-  z-index: 2;
-}
-
-.rotateCenter {
-  transform: rotate(0deg);
-  z-index: 1;
-}
-
-.rotateRight {
-  transform: rotate(0deg);
-  z-index: 0;
-  opacity: 1;
 }
 
 .all-img:nth-of-type(2) {
@@ -593,12 +578,7 @@ hr {
 .all-img:nth-of-type(9),
 .all-img:nth-of-type(10),
 .all-img:nth-of-type(11),
-.all-img:nth-of-type(12),
-.all-img:nth-of-type(13),
-.all-img:nth-of-type(14),
-.all-img:nth-of-type(15),
-.all-img:nth-of-type(16),
-.all-img:nth-of-type(17) {
+.all-img:nth-of-type(12){
   opacity: 0;
   z-index: 0;
 }
@@ -918,24 +898,20 @@ button i {
     margin-top: 100px;
   }
 
-
-  .cont-menu p, .cont-menu div p{
+  .cont-menu p,
+  .cont-menu div p {
     font-size: 12px;
   }
-
 }
 
 @media screen and (max-width: 550px) {
-
   .first-line p:first-of-type,
   .center-line p:last-of-type {
     font-size: 45px;
-    
   }
 }
 
 @media screen and (max-width: 450px) {
-
   .first-line p:first-of-type,
   .center-line p:last-of-type {
     font-size: 35px;
@@ -946,16 +922,13 @@ button i {
     height: 200px;
     margin-top: 150px;
   }
-
 }
 
-@media screen and (max-width: 370px) {
-
+@media screen and (max-width: 375px) {
   .first-line p:first-of-type,
   .center-line p:last-of-type {
     font-size: 30px;
   }
-
 
   .first-line p:last-of-type,
   .center-line p:first-of-type {
@@ -968,4 +941,17 @@ button i {
     margin-top: 170px;
   }
 
+  .cont-menu {
+    justify-content: flex-start;
+  }
+
+  .title {
+    width: 20%;
+    margin-left: 10%;
+  }
+
+  .cont-menu div:first-of-type,
+  .cont-menu div:last-of-type {
+    display: none;
+  }
 }
